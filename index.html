@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noam Elisha - Blog</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        html {
+            height:100%;
+        }
+        main {
+            flex: 1;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5;
+            color: #333;
+            line-height: 1.6;
+
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+
+            background-size: 10px 10px;
+            animation: gradient 30s ease infinite;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        header {
+            align-items: center;
+            padding-top: 10%;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            font-weight: 700;
+            text-align: center;
+            color:white;
+            font-size: 52pt;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+        }
+
+        .navDiv a {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 15px 20px;
+            font-weight: 700;
+            font-size: 32pt;
+            transition: background-color 0.3s ease;
+            border-radius: 200px;
+        }
+
+        nav a:hover {
+            background-color: #f0f2f517;
+            border-radius: 200px;
+        }
+
+        footer {
+            background-color: #3c424f;
+            color: #fff;
+            text-align: center;
+            padding: 1px 0;
+            /* position: fixed; */
+            width: 100%;
+            bottom: 0;
+            box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+            flex-shrink: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+    <header>
+        <h1>Noam Elisha</h1>
+    </header>
+    <nav>
+        <div class="navDiv">
+            <a href="#">Home</a>
+        </div>
+        <div class="navDiv">
+            <a href="#">About</a>
+        </div>
+        <div class="navDiv">
+            <a href="#">Blog</a>
+        </div>
+        <div class="navDiv">
+            <a href="#">Contact</a>
+        </div>
+    </nav>
+    </main>
+    <footer>
+        <p>&copy; 2024 Noam Elisha</p>
+    </footer>
+    
+    <script>
+        function getRandomColor() {
+            const letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+        function setRandomGradient() {
+            const color1 = getRandomColor();
+            const color2 = getRandomColor();
+            const color3 = getRandomColor();
+            const color4 = getRandomColor();
+            const color5 = getRandomColor();
+            const color6 = getRandomColor();
+            const color7 = getRandomColor();
+            const color8 = getRandomColor();
+            const color9 = getRandomColor();
+            const color10 = getRandomColor();
+            const angle = Math.random() * 360 - 180;
+            const header = document.querySelector('body');
+            header.style.background = `linear-gradient(${angle}deg, ${color1}, ${color2}, ${color3}, ${color4}, ${color5}, ${color6}, ${color7}, ${color8}, ${color9}, ${color10})`;
+            header.style.backgroundSize = '400% 400%';
+            header.style.animation = 'gradient 120s ease infinite';
+        }
+
+        document.addEventListener('DOMContentLoaded', setRandomGradient);
+
+
+    </script>
+</body>
+
+</html>
