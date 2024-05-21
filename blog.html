@@ -218,9 +218,9 @@
     </header>
     <nav>
         <a href="index.html">Home</a>
-        <a href="#">About</a>
+        <a href="about.html">About</a>
         <a href="blog.html">Blog</a>
-        <a href="#">Contact</a>
+        <a href="contact.html">Contact</a>
     </nav>
     <div class="container" id="tagNav">
         <span>Tags:</span>
@@ -230,21 +230,11 @@
         <button onclick="filterPosts('music')">Music</button>
         <button onclick="filterPosts('programming')">Programs</button>
         <button onclick="filterPosts('self')">Self</button>
-        <!-- Add more buttons for each tag -->
     </div>
     <div class="container">
-        <div class="post" onclick="openModal('modal2')", data-tags="tag2">
-            <h2>Another Post Title</h2>
-            <p class="post-preview">Tag 2 - Post Preview/Description</p>
-        </div>
-        <div id="modal2" class="modal">
-            <div class="modal-content">
-                <span class="close" onclick="closeModal('modal2')">&times;</span>
-                <h2>Another Post Title</h2>
-                <p class="post-content">Aliquam erat volutpat. In et consectetur mauris. Donec sit amet augue sed sapien hendrerit sollicitudin. Aliquam erat volutpat. In et consectetur mauris. Donec sit amet augue sed sapien hendrerit sollicitudin.</p>
-            </div>
-        </div>
-
+        <!-- Add posts at the top -->
+        
+        
         <div class="post" onclick="openModal('modal1')", data-tags="self">
             <h2>I Finally Made a Website!</h2>
             <span>May 21, 2024</span>
@@ -257,7 +247,6 @@
                 <p class="post-content">It took me way too long but I finally have a website that works and kinda looks good. Thank you ChatGPT for helping me make it (and by helping me make it I mean that it made 90% of it except for the creative decisions). I know that the code is horrible (don't inspect element pls it's embarassing. I don't like front-end okay) but it's okay at least it exists and I think it looks nice :). I'm gonna try and show off different projects I do here, like programming projects (games or other stuff), music stuff, photography, cooking, and other stuff I feel like sharing but don't think my friends will care about unless they seek it out.</p>
             </div>
         </div>
-        <!-- More posts can be added here -->
     </div>
     </main>
     <footer>

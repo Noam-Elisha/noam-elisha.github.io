@@ -1,18 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Noam Elisha</title>
+    <title>Noam Elisha - Contact</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        html {
-            height:100%;
-        }
-        main {
-            flex: 1;
-        }
         body {
             font-family: 'Roboto', sans-serif;
             margin: 0;
@@ -24,9 +17,14 @@
             display: flex;
             flex-direction: column;
             min-height: 100vh;
+        }
 
-            background-size: 10px 10px;
+        header {
+            background-size: 400% 400%;
             animation: gradient 30s ease infinite;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
@@ -42,37 +40,70 @@
             }
         }
 
-        header {
-            align-items: center;
-            padding-top: 10%;
-        }
-
         header h1 {
+            margin: 0;
             font-size: 2.5em;
             font-weight: 700;
-            text-align: center;
-            color:white;
-            font-size: 52pt;
+        }
+
+        header h2 {
+            margin: 0;
+            padding: 0;
         }
 
         nav {
             display: flex;
             justify-content: center;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
-        .navDiv a {
-            color: #ffffff;
+        nav a {
+            color: #3b5998;
             text-decoration: none;
             padding: 15px 20px;
             font-weight: 700;
-            font-size: 32pt;
             transition: background-color 0.3s ease;
-            border-radius: 200px;
         }
 
         nav a:hover {
-            background-color: #f0f2f517;
-            border-radius: 200px;
+            background-color: #f0f2f5;
+        }
+
+        .container {
+            flex: 1;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .contact-info {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-info h2 {
+            margin-bottom: 20px;
+        }
+
+        .contact-info p {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .social-media {
+            margin-top: 20px;
+        }
+
+        .social-media a {
+            margin: 0 10px;
+            color: #4285f4;
+            text-decoration: none;
+            font-size: 24px;
+            transition: color 0.3s ease;
+        }
+
+        .social-media a:hover {
+            color: #0f9d58;
         }
 
         footer {
@@ -88,31 +119,31 @@
         }
     </style>
 </head>
-
 <body>
-    <main>
     <header>
         <h1>Noam Elisha</h1>
+        <h2>Contact</h2>
     </header>
     <nav>
-        <div class="navDiv">
-            <a href="index.html">Home</a>
-        </div>
-        <div class="navDiv">
-            <a href="about.html">About</a>
-        </div>
-        <div class="navDiv">
-            <a href="blog.html">Blog</a>
-        </div>
-        <div class="navDiv">
-            <a href="contact.html">Contact</a>
-        </div>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
     </nav>
-    </main>
+    <div class="container">
+        <div class="contact-info">
+            <h2>Get in Touch</h2>
+            <p><strong>Email:</strong> Coming soon when I figure out how to not get spammed</p>
+            <div class="social-media">
+                <h2>Social Media</h2>
+                <a href="https://www.instagram.com/elisha.noam" target="_blank">Instagram</a>
+                <a href="https://www.linkedin.com/in/noam-elisha/" target="_blank">LinkedIn</a>
+            </div>
+        </div>
+    </div>
     <footer>
         <p>&copy; 2024 Noam Elisha</p>
     </footer>
-    
     <script>
         function getRandomColor() {
             const letters = '0123456789ABCDEF';
@@ -130,21 +161,13 @@
             const color4 = getRandomColor();
             const color5 = getRandomColor();
             const color6 = getRandomColor();
-            const color7 = getRandomColor();
-            const color8 = getRandomColor();
-            const color9 = getRandomColor();
-            const color10 = getRandomColor();
-            const angle = Math.random() * 360 - 180;
-            const header = document.querySelector('body');
-            header.style.background = `linear-gradient(${angle}deg, ${color1}, ${color2}, ${color3}, ${color4}, ${color5}, ${color6}, ${color7}, ${color8}, ${color9}, ${color10})`;
+            const header = document.querySelector('header');
+            header.style.background = `linear-gradient(75deg, ${color1}, ${color2}, ${color3}, ${color4}, ${color5}, ${color6})`;
             header.style.backgroundSize = '400% 400%';
             header.style.animation = 'gradient 120s ease infinite';
         }
 
         document.addEventListener('DOMContentLoaded', setRandomGradient);
-
-
     </script>
 </body>
-
 </html>
