@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Noam Elisha</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
@@ -18,17 +18,14 @@
             font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f0f2f5;
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
             color: #333;
             line-height: 1.6;
-
             display: flex;
             flex-direction: column;
             min-height: 100vh;
-
-            background-size: 10px 10px;
-            animation: gradient 30s ease infinite;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            animation: gradient 15s ease infinite;
         }
 
         @keyframes gradient {
@@ -45,38 +42,47 @@
 
         header {
             align-items: center;
-            padding-top: 10%;
+            padding-top: 15vh;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            min-height: 60vh;
         }
 
         header h1 {
-            font-size: 2.5em;
+            font-size: clamp(2.5rem, 10vw, 52pt);
             font-weight: 700;
             text-align: center;
-            color:white;
-            font-size: 52pt;
+            color: white;
+            margin: 0 0 2rem 0;
+            padding: 0;
         }
 
         nav {
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             flex-wrap: wrap;
-            width:50%;
-            margin:auto;
+            width: min(800px, 90%);
+            margin: 2rem auto;
+            gap: 1rem;
         }
 
         .navDiv a {
             color: #ffffff;
             text-decoration: none;
-            padding: 15px 20px;
+            padding: 0.8em 1.2em;
             font-weight: 700;
-            font-size: 32pt;
-            transition: background-color 0.3s ease;
-            border-radius: 200px;
+            font-size: clamp(1.2rem, 4vw, 32pt);
+            transition: all 0.3s ease;
+            border-radius: 12px;
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
         }
 
-        nav a:hover {
-            background-color: #f0f2f517;
-            border-radius: 200px;
+        .navDiv a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
         }
 
         footer {
@@ -89,6 +95,71 @@
             bottom: 0;
             box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
             flex-shrink: 0;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                padding-top: 10vh;
+                min-height: 50vh;
+            }
+            
+            nav {
+                flex-direction: column;
+                align-items: center;
+                width: 95%;
+            }
+            
+            .navDiv {
+                width: 100%;
+                text-align: center;
+            }
+            
+            .navDiv a {
+                display: block;
+                margin: 0.5rem 0;
+                width: 100%;
+                box-sizing: border-box;
+            }
+            
+            .post {
+                padding: 15px;
+                margin-bottom: 20px;
+            }
+            
+            .modal-content {
+                width: 95%;
+                margin: 5% auto;
+                padding: 15px;
+            }
+            
+            header h1 {
+                font-size: 36pt;
+            }
+            
+            header h2 {
+                font-size: 1.2em;
+            }
+            
+            .post h2 {
+                font-size: 1.5em;
+            }
+            
+            body {
+                font-size: 16px;
+            }
+        }
+
+        .container {
+            width: 90%;
+            margin: 20px auto;
+            padding: 10px;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                width: 95%;
+                padding: 5px;
+            }
         }
     </style>
 </head>
@@ -103,23 +174,14 @@
 </script>
 <body>
     <main>
-    <header>
-        <h1>Noam Elisha</h1>
-    </header>
-    <nav>
-        <div class="navDiv">
-            <a href="index.html">Home</a>
-        </div>
-        <div class="navDiv">
-            <a href="about.html">About</a>
-        </div>
-        <div class="navDiv">
-            <a href="blog.html">Blog</a>
-        </div>
-        <div class="navDiv">
-            <a href="contact.html">Contact</a>
-        </div>
-    </nav>
+        <header>
+            <h1>Noam Elisha</h1>
+            <nav>
+                <div class="navDiv"><a href="about.html">About</a></div>
+                <div class="navDiv"><a href="blog.html">Blog</a></div>
+                <div class="navDiv"><a href="contact.html">Contact</a></div>
+            </nav>
+        </header>
     </main>
     <!-- <footer>
         <p>&copy; 2024 Noam Elisha</p>
